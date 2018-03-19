@@ -7,11 +7,28 @@
 
 </head>
 <body>
-    <h1>My first D3.js project</h1>
-    <div id="viz">
-        <svg width="600" height="400">
+<h1>My first D3.js project</h1>
+<div id="viz">
+    <svg width="200" height="200">
+        <polyline points="0,40 40,40 40,80 80,80 80,120 120,120 120,160"
+                  fill="white" stroke="#BBC42A"
+                  stroke-width="6"/>
+    </svg>
+</div>
+<script>
+    // add a new svg (size 200x200)
+    let svg = d3.select("#viz").append("svg");
+    svg.attr("width", 200)
+        .attr("height", 200);
+    // add a polyline within the new svg
+    svg.append("polyline")
+        .attr("fill", "None")
+        .attr("stroke", "#BBC42A")
+        .attr("stroke-width", 6)
+        .attr("points", "0,40 40,40 40,80 80,80 80,120 120,120 120,160");
 
-        </svg>
-    </div>
+    // specify attributes for polyline
+
+</script>
 </body>
 </html>
